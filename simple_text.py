@@ -1,8 +1,6 @@
 import wn
 from wn.morphy import Morphy
 from nltk.corpus import wordnet as wnet
-from nltk.tag import pos_tag
-from nltk.tokenize import word_tokenize
 
 def test_wn(word):
     syns = {}
