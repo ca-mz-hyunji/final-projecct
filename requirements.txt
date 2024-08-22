@@ -1,0 +1,5 @@
+flask==3.0.3
+wn==0.9.5
+nltk==3.8.1
+sentence-transformers
+torchvision
