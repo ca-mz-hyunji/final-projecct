@@ -47,7 +47,7 @@ class Syns:
                 print(f"An error occurred: {e}.")
         return word_dict
     
-class Similarity:
+class Readability:
 
     def cos_sim(word_dict: dict) -> dict:
         for word in word_list:
@@ -58,6 +58,8 @@ class Similarity:
                 similarity_score = cosine_similarity([origin_sent_emb], [new_embed])
                 word_dict[word]['synonyms'][syn] = similarity_score
         return word_dict
+    
+    def freq(word_dict: dict) -> 
     
 
 if __name__=='__main__':
@@ -72,7 +74,7 @@ if __name__=='__main__':
     
     word_dict = Syns.extract_lines(paragraph, word_list)
     word_dict = Syns.get_synonyms(word_dict)
-    word_dict = Similarity.cos_sim(word_dict)
+    word_dict = Readability.cos_sim(word_dict)
     for word in word_dict:
         for syn in word_dict[word]['synonyms']:
             print(f"Word: '{word}'\nPOS: {word_dict[word]['pos']}\nsynonyms: '{syn}'\nCosine Similarity Score: {word_dict[word]['synonyms'][syn]}\n")
